@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>For Loop Algorithms</title>
+</head>
+<body>
+  <h1>For Loop Algorithms</h1>
+
+  <section>
+    <h2>Problem 1</h2>
+    <p>Write a function that prompst the user to enter two numbers and then find the sum of all the numbers from the first number to the second number.<br>
+      <b>Example Output</b> If the user enters 5 and 10, the function will print: 5 + 6 + 7 + 8 + 9 + 10 = 45
+      <p id="p1-output">Output will appear hear</p>
+      <input id="p1-num1" type="number" placeholder="enter 1st number">
+      <input id="p1-num2" type="number" placeholder="Enter 2nd number">
+      <button onclick="problem1()">Add numbers</button>
+      <script>
+        function problem1(){
+          // Get user nums into variables 
+          var num1 = parseInt(document.getElementById("p1-num1").value);
+          var num2 = parseInt(document.getElementById("p1-num2").value);
+          // Var to hold the sum 
+          var sum = 0; 
+          // Var to hold output p
+          var p = document.getElementById("p1-output");
+          p.innerHTML= "";
+          // Use for loop to add numbers and update output p
+          for (var i = num1; i <= num2; i++){
+            sum += i; 
+            p.innerHTML += i +" + ";
+          }
+          sum += sum2; 
+            p.innerHTML += num2 +" = " + sum;
+        }
+      </script>
+  </section>
+  <section>
+   <h2>Problem 2</h2> 
+   <p>Write a function that prompts the user for a number for a number an then draws that number of "fence postt" that look like |--|, the smallest number of rence posts is two. the fences like this should not be produced: |-- or --||--||</p>
+   <b>Example Output</b> If the user enters 5, the functionwill print |--|--|--|--|
+   <p id ="p2-output">Output will appear here: </p>
+   <input id="p2-num1" type ="number" placeholder="Enter number of Posts">
+   <button onclick="problem2()">Draw Fence</button>
+   <script>
+    function problem2() {
+      // Get user nums into variables
+      var fence1 = parseInt(document.getElementById("p2-num1").value);
+      // Var to hold the fence
+      var fence = "|";
+      // Var to hold output p
+       var p = document.getElementById("p2-output");
+       p.innerHTML= "";
+       
+       // Use for loop to add fences and update output p 
+       for(var f = 0; f < fence1 -1 ; f++){
+        p.innerHTML += "|--";
+    
+       }
+       p.innerHTML += "|"
+      
+       //fence += fence1;
+       //p.innerHTML += fence + "=" + fence;
+      }
+   </script>
+  </section>
+</body>
+</html>

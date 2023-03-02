@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title></title>
+  
+</head>
+
+<body>
+  <h1>5.10 Random Numbers</h1>
+  <section>
+    <h2>Notes</h2>
+    <h3>Intro</h3>
+    <p><b>Random Numbers</b> are useful in software development for many reasons - game mechanics, generating
+      usernames/passwords, anytime you need something seemingly unpredictable<br>
+      <b>Pseudo-random numbers</b> - computers are just complex calculators that can't create truly random numbers, but instead, use an algorithm that generates numbers that seem random
+    </p>
+    <h3>Random numbers in JS</h3>
+    <p>
+      Javascript provides a number of functions that are useful for generating random numbers
+      <ul>
+        <li><code>Math.random()</code> is a function that returns a pseudo-random number between 0 and 1, not including 1</li>
+        <li><code>Math.floor()</code> is a function that takes a decimal number and rounds it down - chops off the decimal part</li>
+      </ul>
+    </p>
+    <button onclick="alert(Math.random())">Test <code>Math.random()</code></button>
+    <button onclick="alert(Math.floor(3.14159))">Test <code>Math.floor()</code></button>
+    <h3>Random number calculations</h3>
+    <p>
+      To produce a random integer from min to max (including min and excluding max) use this calculation.<br>
+      <code>Math.floor(Math.random() * (max - min)) + min</code><br><br>
+      <u>Example</u>
+      Generate a random number from 1 to 10 and store it in a variable.<br>
+      <code>var randNum = Math.floor(Math.random) * 10) + 1;</code>
+    </p>
+    <button onclick="example()">Generate random num from 1 to 10</button>
+    <script>
+      function example(){
+        var randNum = Math.floor(Math.random() * 9) + 1;
+        alert(randNum);
+      }
+    </script>
+  </section>
+</body>
+
+</html>

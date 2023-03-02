@@ -1,0 +1,21 @@
+section {
+  background-color: yellow; border-style: groove;
+  border-color: black;
+  border-radius: 6px;
+  margin: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  
+}
+
+body {
+  background-color: red;
+
+}
+h1{
+  background-color: yellow;
+  border-style: groove;
+  border-color: black;
+  margin: 10px;
+  text-align: center;
+}
