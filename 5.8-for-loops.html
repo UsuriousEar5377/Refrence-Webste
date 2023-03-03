@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="output"></p>
+  <a href="#" onclick="example1()">Example 1</a>
+  <a href="#" onclick="sum()">Sum</a>
+</body>
+<script>
+  function example1() {
+    var output = document.getElementById("output");
+    for (var i = 0; i < 10; i++) {
+      output.innerHTML += Math.random() + "<br>";
+    }
+  }
+
+  function sum() {
+      var num1 = parseInt(prompt("Enter a number"));
+      var num2 = parseInt(prompt("Enter another number"));
+      var sum = 0;
+      var p = document.getElementById("output");
+      for (var i = num1; i < num2; i++){
+        sum += i;
+        p.innerHTML += i + " + ";
+      }
+      sum += num2;
+      p.innerHTML += num2 + " = " + sum;
+      
+    }
+</script>
+
+</html>
